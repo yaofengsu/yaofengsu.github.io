@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaofeng Su</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --bg: #fdfdfc;
+  --border: #e0ddd8;
+  --accent: #2c5f2d;
+  --tag-bg: #f0eeea;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 72px 24px 120px;
+}
+
+/* ---- Header ---- */
+.header {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-bottom: 56px;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--tag-bg);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 32px;
+  color: var(--accent);
+  letter-spacing: -1px;
+}
+
+.header-info h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.header-info .subtitle {
+  color: var(--text-secondary);
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.header-info .links {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+}
+
+.header-info .links a {
+  color: var(--text-secondary);
+  transition: color .2s;
+}
+.header-info .links a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---- Sections ---- */
+section { margin-bottom: 48px; }
+
+section h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+
+.bio { color: var(--text-secondary); font-size: 14.5px; }
+
+/* Research interests */
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.interests span {
+  background: var(--tag-bg);
+  padding: 5px 14px;
+  border-radius: 3px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Education */
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.edu-item:last-child { border-bottom: none; }
+.edu-item .degree { font-weight: 500; }
+.edu-item .school { color: var(--text-secondary); margin-left: 6px; font-weight: 400; }
+.edu-item .year { color: var(--text-secondary); font-size: 13px; white-space: nowrap; }
+
+/* Publications */
+.pub-item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.pub-item:last-child { border-bottom: none; }
+
+.pub-title { font-weight: 500; line-height: 1.5; }
+.pub-authors { color: var(--text-secondary); font-size: 13px; margin-top: 3px; }
+.pub-venue { font-style: italic; color: var(--text-secondary); font-size: 13px; }
+.pub-links { margin-top: 6px; font-size: 12.5px; display: flex; gap: 12px; }
+
+/* CV button */
+.cv-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 20px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--text);
+  transition: all .2s;
+}
+.cv-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: #aaa;
+}
+
+@media (max-width: 500px) {
+  .header { flex-direction: column; gap: 16px; }
+  .page { padding: 48px 20px 80px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <img class="avatar" src="avatar.jpg" alt="Yaofeng Su" style="object-fit:cover;">
+    <div class="header-info">
+      <h1>Yaofeng Su</h1>
+      <div class="subtitle">B.S. in Computer Science · Fudan University</div>
+      <div class="links">
+        <a href="mailto:yaofengsu@outlook.com">Email</a>
+        <a href="https://www.semanticscholar.org/author/Yaofeng-Su/2364849554">Semantic Scholar<span id="citation-count"></span></a>
+        <a href="https://github.com/InfiniteLoopCoder">GitHub</a>
+        <a href="main.pdf" target="_blank">CV</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bio -->
+  <section>
+    <h2>About</h2>
+    <p class="bio">
+      I am a senior undergraduate at Fudan University (GPA 3.84/4.00), enthusiastic about changing lives through computing.
+      I operate on the principle: <em>"The purpose of computing is insight, not numbers."</em>
+      Recently, I am an intern at JD Explore Academy, researching streaming audio-visual generation,
+      DMD distillation algorithms, and world models with world model memory.
+      In 2025, I was an exchange student at UNC Chapel Hill, supervised by Prof. Huaxiu Yao,
+      where I contributed significantly to <a href="https://github.com/aiming-lab/SimpleMem">SimpleMem</a> based on deep analysis
+      of long-term conversation characteristics and memory structures.
+    </p>
+    <p class="bio" style="margin-top: 12px;">
+      <strong>I am seeking PhD opportunities in multimodal foundation models for Fall 2027.</strong>
+      I aspire to conduct research grounded in solid theoretical insights, with a particular interest in
+      physically faithful world representations and enabling real-world tasks.
+      If you have any relevant openings or would like to discuss potential collaboration,
+      please feel free to contact me at <a href="mailto:yaofengsu@outlook.com">yaofengsu@outlook.com</a> — <strong>I would truly appreciate it.</strong>
+    </p>
+  </section>
+
+  <!-- Research Interests -->
+  <section>
+    <h2>Research Interests</h2>
+    <p class="bio" style="margin-bottom: 12px;">
+      My research interest lies in multimodal generative models as a means to build faithful representations of the world.
+      Through reinforcement learning, distillation, and agent frameworks, I have contributed to applications spanning
+      audio-visual generation, autonomous driving, and video understanding.
+      I am particularly drawn to developing principled approaches that bridge generative modeling with physically grounded world understanding.
+    </p>
+    <div class="interests">
+      <span>Multimodal Generative Models</span>
+      <span>Reinforcement Learning</span>
+      <span>Diffusion Models & SDE</span>
+      <span>LLM/VLM Distillation</span>
+      <span>AI Agent</span>
+      <span>World Models</span>
+      <span>Physically Faithful Representations</span>
+      <span>Embodied Intelligence</span>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <div class="edu-item">
+      <div><span class="degree">B.S. in Computer Science, GPA 3.84/4.00</span><span class="school">· Fudan University</span></div>
+      <div class="year">2023 – 2027</div>
+    </div>
+    <div class="edu-item">
+      <div><span class="degree">Exchange Student, Dean's List</span><span class="school">· UNC Chapel Hill</span></div>
+      <div class="year">2025</div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section>
+    <h2>Publications</h2>
+
+    <div class="pub-item">
+      <div class="pub-title">OmniForcing: Unleashing Real-time Joint Audio-Visual Generation</div>
+      <div class="pub-authors"><strong><u>Yaofeng Su</u>*</strong>, Yuming Li*, Zeyue Xue, Jie Huang, Siming Fu, Haoran Li, Ying Li, Zezhong Qian, Haoyang Huang, Nan Duan</div>
+      <div class="pub-venue">Under Review</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2603.11647">[paper]</a>
+        <a href="https://github.com/OmniForcing/OmniForcing">[code]</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">SimpleMem: Efficient Lifelong Memory for LLM Agents</div>
+      <div class="pub-authors">Jiaqi Liu*, <strong><u>Yaofeng Su</u>*</strong>, Peng Xia, Siwei Han, Zeyu Zheng, Cihang Xie, Mingyu Ding, Huaxiu Yao</div>
+      <div class="pub-venue">Under Review</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2601.02553">[paper]</a>
+        <a href="https://github.com/aiming-lab/SimpleMem">[code]</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">Learning a Unified Risk Map for Autonomous Driving in Partially Observable Environments</div>
+      <div class="pub-authors">Jie Jia*, <strong><u>Yaofeng Su</u>*</strong>, Zeyu Bao, Yun Hong, Bingzhao Gao, Zhongxue Gan, Wenchao Ding</div>
+      <div class="pub-venue">IEEE RA-L 2026</div>
+      <div class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/11399898">[paper]</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">ReAgent-V: A Reward-Driven Multi-Agent Framework for Video Understanding</div>
+      <div class="pub-authors">Yiyang Zhou*, Yangfan He*, <strong><u>Yaofeng Su</u></strong>, Siwei Han, Joel Jang, Gedas Bertasius, Mohit Bansal, Huaxiu Yao</div>
+      <div class="pub-venue">NeurIPS 2025</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2506.01300">[paper]</a>
+        <a href="https://github.com/aiming-lab/ReAgent-V">[code]</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">JoyAI-Image: Awakening Spatial Intelligence in Unified Multimodal Understanding and Generation</div>
+      <div class="pub-authors">JD Explore Academy (contribution during internship)</div>
+      <div class="pub-venue">Tech Report</div>
+      <div class="pub-links">
+        <a href="https://joyai-image.s3.cn-north-1.jdcloud-oss.com/JoyAI-Image.pdf">[paper]</a>
+        <a href="https://github.com/jd-opensource/JoyAI-Image">[code]</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section>
+    <h2>CV</h2>
+    <a class="cv-btn" href="main.pdf" target="_blank">Download CV (PDF)</a>
+  </section>
+
+  <div class="footer">Last updated: April 2026 <!-- update this when you make changes --></div>
+
+</div>
+<script>
+fetch('https://api.semanticscholar.org/graph/v1/author/2364849554?fields=citationCount')
+  .then(r => r.json())
+  .then(data => {
+    if (data.citationCount) {
+      document.getElementById('citation-count').textContent = ' (' + data.citationCount + '+ citations)';
+    } else {
+      document.getElementById('citation-count').textContent = ' (55+ citations)';
+    }
+  })
+  .catch(() => {
+    document.getElementById('citation-count').textContent = ' (55+ citations)';
+  });
+</script>
+</body>
+</html>
