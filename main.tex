@@ -1,0 +1,223 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{amssymb}
+\usepackage{fontspec}
+\setmainfont{texgyrepagella}[
+  Extension = .otf,
+  UprightFont = *-regular,
+  BoldFont = *-bold,
+  ItalicFont = *-italic,
+  BoldItalicFont = *-bolditalic
+]
+% glyphtounicode not needed for XeTeX/tectonic
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textheight}{1.9in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\bfseries\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% ATS parsable by default with XeTeX
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\newcommand{\resumeAuthors}[1]{
+    \vspace{-7pt}\par\noindent\hspace{0.01in}\begin{minipage}[t]{0.96\textwidth}\small #1\end{minipage}\vspace{-3pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, topsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge Yaofeng Su} \\ \vspace{1pt}
+    \small \href{mailto:yfsu23@m.fudan.edu.cn}{\underline{yfsu23@m.fudan.edu.cn}} $|$
+    \href{https://github.com/InfiniteLoopCoder}{\underline{GitHub: InfiniteLoopCoder}}, 3.3k stars $|$
+    \href{https://scholar.google.com/citations?user=ASn1XLAAAAAJ}{\underline{Google Scholar}}, 145 citations
+\end{center}
+\vspace{-8pt}
+\section{Research Interest}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\item\small My research interest lies in multimodal generative models as a means to build faithful world representations. Through RL, distillation, and agent frameworks, I have contributed to audio-visual generation, autonomous driving, and video understanding. Going forward, I aim to advance multimodal foundation models with principled theoretical insights.
+\end{itemize}\vspace{-14pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Fudan University}{Shanghai, China}
+      {B.S. in Computer Science}{Sep. 2023 -- Jul. 2027}
+      \resumeItemListStart
+        \resumeItem{GPA 3.8/4.0, Rank 4/92. Advised by \textbf{Prof.\ Wenchao Ding} on autonomous driving risk assessment.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of North Carolina at Chapel Hill}{Chapel Hill, NC}
+      {Exchange Student}{Aug. 2025 -- Dec. 2025}
+      \resumeItemListStart
+        \resumeItem{Dean's List. Researched VLA models and LLM agents under the supervision of \textbf{Prof.\ Huaxiu Yao}.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------REPRESENTATIVE HONORS AND AWARDS-----------
+\section{Representative Honors}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading{\textbf{Tencent Outstanding Student Award}}{Sep. 2025}
+    \resumeProjectHeading{\textbf{Fudan University Outstanding Student Award} (Top 8\%)}{Oct. 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------INTERNSHIP EXPERIENCE-----------
+\section{Internship Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Joy Future Academy, JD}{Dec. 2025 -- Present}
+      {Intern, Multimodal Foundation Model Research Department}{}
+      \resumeItemListStart
+        \resumeItem{Researching streaming audio-visual generation, DMD distillation algorithms, and world models with world model memory. Supervised by \textbf{Zeyue Xue}.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------INVITED TALKS-----------
+\section{Invited Talks}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{Invited Talk, Lightricks (LTX-Video Team)}}{May 2026}
+        \resumeItemListStart
+          \resumeItem{Presented OmniForcing to Lightricks' CTO and Director of GenAI Research. Discussed real-time streaming audio-visual generation on the LTX-2 foundation model and ongoing LTX-2.3 collaboration.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{OmniForcing: Unleashing Real-time Joint Audio-Visual Generation}}{ECCV 2026}
+          \resumeAuthors{\underline{Yaofeng Su}*, Yuming Li*, Zeyue Xue, Jie Huang, Siming Fu, Haoran Li, Haoyang Huang, Nan Duan}
+          \resumeItemListStart
+            \resumeItem{Proposed a framework to distill offline bidirectional audio-visual diffusion models into real-time streaming autoregressive generators. \textit{Cited by the Alibaba Wan Team.}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{SimpleMem: Efficient Lifelong Memory for LLM Agents}}{ICML 2026}
+          \resumeAuthors{Jiaqi Liu*, \underline{Yaofeng Su}*, Peng Xia, Siwei Han, Zeyu Zheng, Cihang Xie, Mingyu Ding, Huaxiu Yao}
+          \resumeItemListStart
+            \resumeItem{Proposed an efficient lifelong memory system for LLM agents that reduces redundancy and token costs while maintaining long-term interaction quality.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Learning a Unified Risk Map for Autonomous Driving in Partially Observable Environments}}{IEEE RA-L 2026}
+          \resumeAuthors{Jie Jia*, \underline{Yaofeng Su}*, Zeyu Bao, Yun Hong, Bingzhao Gao, Zhongxue Gan, Wenchao Ding}
+          \resumeItemListStart
+            \resumeItem{Proposed a unified risk map representation for occlusion-aware prediction in partially observable driving environments.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{ReAgent-V: A Reward-Driven Multi-Agent Framework for Video Understanding}}{NeurIPS 2025}
+          \resumeAuthors{Yiyang Zhou*, Yangfan He*, \underline{Yaofeng Su}, Siwei Han, Joel Jang, Gedas Bertasius, Mohit Bansal, Huaxiu Yao}
+          \resumeItemListStart
+            \resumeItem{Proposed a reward-driven multi-agent framework that enables dynamic feedback and self-correction for video understanding.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation}}{Tech Report, 2026}
+          \resumeAuthors{Echo Team @ Joy Future Academy, JD}
+          \resumeItemListStart
+            \resumeItem{A long-form multi-shot audio-video generation framework with cross-modal memory and DMD distillation, achieving 7.5$\times$ inference speedup and minute-level coherent story generation.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming}{: Python, C/C++, PyTorch, Triton, Linux, Git, Docker} $|$ \textbf{Languages}{: English (TOEFL 108)} \\
+     \textbf{AI}{: RL Theory, Diffusion Models and SDE, LLM/VLM Distillation, Distributed Training, AI Agent, Algorithm Analysis}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
