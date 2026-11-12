@@ -1,24 +1,20 @@
 %-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
+% Curriculum Vitae -- Yaofeng Su
+% Build: tectonic YaofengSu_CV.tex
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[a4paper,left=0.62in,right=0.62in,top=0.62in,bottom=0.64in,footskip=0.32in]{geometry}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{lastpage}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
 \usepackage{amssymb}
 \usepackage{fontspec}
 \setmainfont{texgyrepagella}[
@@ -28,196 +24,213 @@
   ItalicFont = *-italic,
   BoldItalicFont = *-bolditalic
 ]
-% glyphtounicode not needed for XeTeX/tectonic
+\linespread{1.05}
 
+\hypersetup{
+  pdftitle={Yaofeng Su - Curriculum Vitae},
+  pdfauthor={Yaofeng Su}
+}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.9in}
-\addtolength{\textheight}{1.9in}
+\fancyfoot[L]{\footnotesize\color{black!55}Yaofeng Su \,|\, Curriculum Vitae}
+\fancyfoot[R]{\footnotesize\color{black!55}\thepage\ / \pageref{LastPage}}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections formatting (clean, comfortable breathing room)
 \titleformat{\section}{
-  \vspace{-8pt}\bfseries\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% ATS parsable by default with XeTeX
+  \bfseries\raggedright\large
+}{}{0em}{}[\vspace{1pt}\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{#1}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+  \item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+  \item\small #1 \hfill #2
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\newcommand{\resumeAuthors}[1]{
-    \vspace{-7pt}\par\noindent\hspace{0.01in}\begin{minipage}[t]{0.96\textwidth}\small #1\end{minipage}\vspace{-3pt}
+\newcommand{\resumePubHeading}[4]{
+  \item
+    \begin{minipage}{\linewidth}
+      \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+        \small\href{#1}{\textbf{#2}} & \small #3 \\
+      \end{tabular*}\par\vspace{1.5pt}
+      {\small #4}
+    \end{minipage}\vspace{1pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, topsep=0pt]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.10in, label={}, topsep=1pt, itemsep=4pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeCompactListStart}{\begin{itemize}[leftmargin=0.10in, label={}, topsep=1.5pt, itemsep=2.5pt, parsep=0pt]}
+\newcommand{\resumeCompactListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, topsep=2.5pt, itemsep=2pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    \textbf{\Huge Yaofeng Su} \\ \vspace{1pt}
-    \small \href{mailto:yaofengsu@outlook.com}{\underline{yaofengsu@outlook.com}} $|$
-    \href{https://github.com/InfiniteLoopCoder}{\underline{GitHub: InfiniteLoopCoder}}, 3.3k stars $|$
-    \href{https://scholar.google.com/citations?user=ASn1XLAAAAAJ}{\underline{Google Scholar}}, 224 citations
+    {\Huge\textbf{Yaofeng Su}} \\[4pt]
+    \small
+    \href{mailto:yaofengsu@outlook.com}{\underline{yaofengsu@outlook.com}} \,$\cdot$\,
+    \href{https://yaofengsu.github.io/}{\underline{yaofengsu.github.io}} \,$\cdot$\,
+    \href{https://scholar.google.com/citations?user=ASn1XLAAAAAJ}{\underline{Google Scholar}} (312 citations)
 \end{center}
-\vspace{-8pt}
-\section{Research Interest}
-\begin{itemize}[leftmargin=0.15in, label={}]
-\item\small My research interest lies in multimodal generative models as a means to build faithful world representations. Through RL, distillation, and agent frameworks, I have contributed to audio-visual generation, autonomous driving, and video understanding. Going forward, I aim to advance multimodal foundation models with principled theoretical insights.
-\end{itemize}\vspace{-14pt}
+\vspace{-4pt}
+
+%-----------RESEARCH INTERESTS-----------
+\section{Research Interests}
+\begin{itemize}[leftmargin=0.10in, label={}, topsep=0pt]
+\item\small My undergraduate research has centered on building faithful representations of the world with multimodal generative models. Through diffusion distillation, reinforcement learning, and structured memory and agent harnesses, my work across streaming audio-visual synthesis, risk-aware scene modeling, and lifelong memory has laid the groundwork for real-time multimodal interaction. Going forward, I aim to develop expressive, full-duplex interactive multimodal models and inference-time reasoning techniques during live interaction, while advancing physical fidelity and long-horizon consistency to support real-world task planning.
+\end{itemize}
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Fudan University}{Shanghai, China}
-      {B.S. in Computer Science}{Sep. 2023 -- Jul. 2027}
+      {B.S. in Computer Science and Technology}{Sep. 2023 -- Jul. 2027 (Expected)}
       \resumeItemListStart
-        \resumeItem{GPA 3.84/4.00, Rank 7/97. Advised by \textbf{Prof.\ Wenchao Ding} on autonomous driving risk assessment.}
+        \resumeItem{GPA: 3.84/4.00 (Rank 7/98). Advised by \textbf{Prof.\ Wenchao Ding} on autonomous driving risk assessment.}
       \resumeItemListEnd
     \resumeSubheading
-      {University of North Carolina at Chapel Hill}{Chapel Hill, NC}
-      {Exchange Student}{Aug. 2025 -- Dec. 2025}
+      {The University of North Carolina at Chapel Hill}{Chapel Hill, NC, USA}
+      {Visiting Exchange Student in Computer Science}{Aug. 2025 -- Dec. 2025}
       \resumeItemListStart
-        \resumeItem{Dean's List. Researched VLA models and LLM agents under the supervision of \textbf{Prof.\ Huaxiu Yao}.}
+        \resumeItem{GPA: 3.58/4.00, Dean's List. Researched VLA models and LLM agents with \textbf{Prof.\ Huaxiu Yao}.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-
-%-----------REPRESENTATIVE HONORS AND AWARDS-----------
-\section{Representative Honors}
-  \resumeSubHeadingListStart
-    \resumeProjectHeading{\textbf{Tencent Outstanding Student Award} (Hunyuan Team)}{Sep. 2025}
-    \resumeProjectHeading{\textbf{Fudan University Outstanding Student Award} (Top 8\%)}{Oct. 2024}
-  \resumeSubHeadingListEnd
-
-
-%-----------INTERNSHIP EXPERIENCE-----------
-\section{Internship Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Joy Future Academy, JD}{Dec. 2025 -- Present}
-      {Intern, Multimodal Foundation Model Research Department}{}
-      \resumeItemListStart
-        \resumeItem{Developed audio-visual distillation algorithms and real-time streaming generation architectures. Core contributor to OmniForcing (ECCV 2026) and JoyAI-Echo. Currently exploring world models with memory mechanisms. Supervised by \textbf{Zeyue Xue}.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
-%-----------INVITED TALKS-----------
-\section{Invited Talks}
-  \resumeSubHeadingListStart
-    \resumeProjectHeading
-        {\textbf{Invited Talk, Lightricks (LTX-Video Team)}}{May 2026}
-        \resumeItemListStart
-          \resumeItem{Presented joint audio-visual streaming generation and self-forcing distillation methodology to Lightricks' CTO and Director of GenAI Research, covering LTX-2 foundation model adaptation and ongoing LTX-2.3 collaboration.}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
 
 %-----------PUBLICATIONS-----------
-\section{Publications}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{OmniForcing: Unleashing Real-time Joint Audio-Visual Generation}}{ECCV 2026, \textbf{Oral}}
-          \resumeAuthors{\underline{Yaofeng Su}*, Yuming Li*, Zeyue Xue, Jie Huang, Siming Fu, Haoran Li, Haoyang Huang, Nan Duan}
-          \resumeItemListStart
-            \resumeItem{Designed asymmetric block-causal alignment and joint self-forcing distillation to convert offline bidirectional audio-visual diffusion models into real-time streaming generators at 25 FPS. Selected as \textbf{one of only 28 ECCV 2026 long orals} and featured as a representative real-time audio-visual generation baseline in Alibaba Wan Streamer.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{SimpleMem: Efficient Lifelong Memory for LLM Agents}}{ICML 2026}
-          \resumeAuthors{Jiaqi Liu*, \underline{Yaofeng Su}*, Peng Xia, Siwei Han, Zeyu Zheng, Cihang Xie, Mingyu Ding, Huaxiu Yao}
-          \resumeItemListStart
-            \resumeItem{Designed semantic structured compression and intent-aware retrieval for LLM agent lifelong memory, improving F1 by 26.4\% on LoCoMo while reducing token consumption by 30$\times$.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Learning a Unified Risk Map for Autonomous Driving in Partially Observable Environments}}{IEEE RA-L 2026}
-          \resumeAuthors{Jie Jia*, \underline{Yaofeng Su}*, Zeyu Bao, Yun Hong, Bingzhao Gao, Zhongxue Gan, Wenchao Ding}
-          \resumeItemListStart
-            \resumeItem{Addressed occlusion-induced collision risk in autonomous driving by modeling hidden vehicle motion distributions with adversarial-guided diffusion, enabling risk-aware planning without full observability.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{ReAgent-V: A Reward-Driven Multi-Agent Framework for Video Understanding}}{NeurIPS 2025}
-          \resumeAuthors{Yiyang Zhou*, Yangfan He*, \underline{Yaofeng Su}, Siwei Han, Joel Jang, Gedas Bertasius, Mohit Bansal, Huaxiu Yao}
-          \resumeItemListStart
-            \resumeItem{A multi-agent framework that leverages video understanding to generate reward signals for downstream tasks. Contributed reward-based VLA post-training, surpassing RL baselines by 9.8\% on VLA alignment.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation}}{Tech Report, 2026}
-          \resumeAuthors{Echo Team @ Joy Future Academy, JD}
-          \resumeItemListStart
-            \resumeItem{A long-form multi-shot framework with cross-modal memory and DMD distillation, achieving 7.5$\times$ inference speedup and minute-level coherent audio-video story generation.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\section{Peer-Reviewed Publications {\normalfont\footnotesize (* indicates equal contribution)}}
+  \resumeSubHeadingListStart
+    \resumePubHeading
+      {https://doi.org/10.1007/978-3-032-37271-0_31}
+      {OmniForcing: Unleashing Real-time Joint Audio-Visual Generation}
+      {ECCV 2026, \textbf{Long Oral}}
+      {\underline{Yaofeng Su}*, Yuming Li*, Zeyue Xue, Jie Huang, Siming Fu, Haoran Li, Haoyang Huang, Nan Duan\\
+      \textit{Selected as one of 28 Long Oral presentations out of 10,473 submissions ($\sim$0.27\%).}}
 
+    \resumePubHeading
+      {https://openreview.net/forum?id=oBgLvd5YC6}
+      {SimpleMem: Efficient Lifelong Memory for LLM Agents}
+      {ICML 2026}
+      {Jiaqi Liu*, \underline{Yaofeng Su}*, Peng Xia, Siwei Han, Zeyu Zheng, Cihang Xie, Mingyu Ding, Huaxiu Yao}
+
+    \resumePubHeading
+      {https://doi.org/10.1109/LRA.2026.3666393}
+      {Learning a Unified Risk Map for Autonomous Driving in Partially Observable Environments}
+      {IEEE RA-L 2026}
+      {Jie Jia*, \underline{Yaofeng Su}*, Zeyu Bao, Yun Hong, Bingzhao Gao, Zhongxue Gan, Wenchao Ding}
+
+    \resumePubHeading
+      {https://doi.org/10.52202/085713-5066}
+      {ReAgent-V: A Reward-Driven Multi-Agent Framework for Video Understanding}
+      {NeurIPS 2025}
+      {Yiyang Zhou*, Yangfan He*, \underline{Yaofeng Su}, Siwei Han, Joel Jang, Gedas Bertasius, Mohit Bansal, Huaxiu Yao}
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Tencent}{Oct. 2026 -- Present}
+      {Research Intern, Multimodal Generative Models (Tencent Qingyun Program)}{}
+      \resumeItemListStart
+        \resumeItem{Selected into the \textbf{Tencent Qingyun Program}---Tencent's flagship, top-tier-compensated AI research internship for standout Ph.D./M.S. candidates and exceptional undergraduates---to develop architectures and algorithms for full-duplex real-time interactive generation, dynamic world-state evolution, and long-horizon persistence.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Joy Future Academy, JD.com}{Dec. 2025 -- Oct. 2026}
+      {Research Intern, Multimodal Foundation Model Research Department}{Mentor: \textbf{Zeyue Xue}}
+      \resumeItemListStart
+        \resumeItem{Researched real-time streaming multimodal diffusion, distribution matching distillation (DMD), and action-conditioned audio-visual world models with camera-trajectory control and long self-rollout training.}
+        \resumeItem{\textbf{OmniForcing (ECCV 2026 Long Oral):} Co-led (listed first) the distillation of offline bidirectional audio-visual diffusion models into streaming generators (0.71\,s first-chunk latency, $\sim$25 FPS on a single GPU); proposed physical-time asymmetric block-causal alignment with a global prefix and identity-RoPE audio sink tokens, alongside a three-stage joint Self-Forcing distillation recipe.}
+        \resumeItem{\textbf{JoyAI-Echo (Tech Report, 2026):} Built upon my OmniForcing framework to develop audio-visual DMD distillation for minute-level multi-shot generation, stabilizing training via CFG rescaling and an audio adversarial discriminator to achieve a 7.5$\times$ inference speedup.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {The University of North Carolina at Chapel Hill}{Aug. 2025 -- Dec. 2025}
+      {Research Intern, Department of Computer Science}{Advisor: \textbf{Prof.\ Huaxiu Yao}}
+      \resumeItemListStart
+        \resumeItem{Researched lifelong memory architectures for long-horizon LLM agents and reward-guided post-training for robotic vision-language-action (VLA) policies.}
+        \resumeItem{\textbf{SimpleMem (ICML 2026):} Originated and co-led a lifelong memory framework combining write-time semantic structured compression, recursive memory consolidation, and intent-aware hybrid retrieval, improving average F1 by 26.4\% on LoCoMo while reducing inference token consumption by up to 30$\times$.}
+        \resumeItem{\textbf{ReAgent-V (NeurIPS 2025):} Adapted and debugged the SimplerEnv benchmark and reformulated VLA post-training from sequence-level to action-chunk-level optimization with video-understanding rewards, outperforming RL baselines by 9.8\% on VLA alignment.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Fudan University}{Oct. 2024 -- Sep. 2025}
+      {Research Intern, College of Intelligent Robotics and Advanced Manufacturing}{Advisor: \textbf{Prof.\ Wenchao Ding}}
+      \resumeItemListStart
+        \resumeItem{Researched diffusion-based safety-critical traffic scenario synthesis and spatio-temporal risk modeling for autonomous driving in partially observable environments.}
+        \resumeItem{\textbf{Unified Risk Map (IEEE RA-L 2026):} Co-led the framework on the Waymo Open Motion Dataset; proposed off-road and adversarially guided diffusion denoising to synthesize realistic occluded interactions, designed a lightweight spatio-temporal risk prediction network, and led manuscript drafting and peer-review revisions.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------HONORS AND AWARDS-----------
+\section{Honors and Awards}
+  \resumeCompactListStart
+    \resumeProjectHeading{\textbf{Selected for ECCV 2026 Long Oral Presentation} (28 of 10,473 submissions, $\sim$0.27\%)}{Aug. 2026}
+    \resumeProjectHeading{\textbf{Dean's List}, The University of North Carolina at Chapel Hill}{Dec. 2025}
+    \resumeProjectHeading{\textbf{Tencent Rhino-Bird Open-Source Talent Program Outstanding Student Award} (41 of 2,300+)}{Sep. 2025}
+    \resumeProjectHeading{\textbf{Fudan University Outstanding Student Award} (Top 8\%)}{Oct. 2024}
+    \resumeProjectHeading{\textbf{First Prize \& First-Year Student First Prize}, Inaugural Fudan--Tongji CTF Competition}{Apr. 2024}
+  \resumeCompactListEnd
+
+%-----------TALKS AND PRESENTATIONS-----------
+\section{Talks and Presentations}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ECCV 2026 Long Oral Presentation}{Aug. 2026}
+      {Oral Presenter, European Conference on Computer Vision (ECCV)}{Malm\"o, Sweden}
+      \resumeItemListStart
+        \resumeItem{Presented \textit{OmniForcing: Unleashing Real-time Joint Audio-Visual Generation} in the main conference oral session.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Invited Talk, Lightricks (LTX-Video Team)}{May 2026}
+      {Invited Speaker, Lightricks Research}{}
+      \resumeItemListStart
+        \resumeItem{Presented \textit{OmniForcing} (real-time streaming joint audio-visual generation built on LTX-2) to Lightricks' CTO and Director of GenAI Research.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ACADEMIC SERVICE-----------
+\section{Academic Service}
+  \resumeCompactListStart
+    \resumeProjectHeading{\textbf{Reviewer}, IEEE International Conference on Robotics and Automation (ICRA)}{2027}
+    \resumeProjectHeading{\textbf{Reviewer}, COLM Workshop on Lifelong Agents: Learning, Aligning, and Evolving (LLA)}{2026}
+    \resumeProjectHeading{\textbf{Reviewer}, ICLR Workshop on Lifelong Agents: Learning, Aligning, Evolving (LLA)}{2026}
+  \resumeCompactListEnd
 
 %-----------SKILLS-----------
 \section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0.10in, label={}, topsep=1pt]
     \small{\item{
-     \textbf{Programming}{: Python, C/C++, PyTorch, Triton, Linux, Git, Docker} $|$ \textbf{Languages}{: English (TOEFL 108)} \\
-     \textbf{AI}{: Reinforcement Learning, Diffusion Models and SDE, LLM/VLM Distillation, Distributed Training, AI Agent, Algorithm Analysis}
+     \textbf{Programming \& Systems}{: Python, C/C++, PyTorch, Triton, Distributed Training, Linux, Git, Docker} \\
+     \textbf{Languages}{: Chinese (Mandarin, native); English (fluent, TOEFL iBT 108: R 30, L 28, S 23, W 27)} \\
+     \textbf{Research Areas}{: Diffusion \& Flow Models, Model Distillation, Reinforcement Learning, World Models, Multimodal Agents}
     }}
  \end{itemize}
 
-
-%-------------------------------------------
 \end{document}
